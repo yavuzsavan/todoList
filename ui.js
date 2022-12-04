@@ -9,7 +9,7 @@ class UI {
     
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("deleteButton");
-        deleteButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        deleteButton.innerHTML= "X";
 
         
         li.appendChild(deleteButton);
@@ -29,7 +29,7 @@ class UI {
 
 
     deleteTask = (event) => {
-        console.log("silindi");
+        // console.log(event.target);
         if (event.target.classList.contains("deleteButton")) {
             event.target.parentElement.remove();
         }
