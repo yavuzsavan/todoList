@@ -19,19 +19,22 @@ function todoList(event) {
 
     if (taskInput.value) {
         ui.addTask(taskInput.value);
-        taskInput.value = "";
         
+        Storage.addTasksToStorage(taskInput.value);
+        taskInput.value = "";
+
         alert.innerHTML = ui.alertFunc("success", "Listeye Eklendi");
-        // setTimeout( () => {
-        //     alert.innerHTML = "";
-        // }, 2000);
+        setTimeout( () => {
+            alert.innerHTML = "";
+        }, 2000);
     }
     else {
         alert.innerHTML = ui.alertFunc();
-        // setTimeout( () => {
-        //     alert.innerHTML = "";
-        // }, 2000);
+        setTimeout( () => {
+            alert.innerHTML = "";
+        }, 2000);
     }
+
 }
 
 
